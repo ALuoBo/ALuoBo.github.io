@@ -11,6 +11,12 @@
     <content type="html"><![CDATA[<p>状态向下，将状态一直可组合的调用方之后，新的状态获取是从调用方向下传递给无状态的可组合项的。</p><p>事件向上，虽然事件的触发还是从无状态的可组合项而来，但是事件的处理是交给上方的有状态组合项去处理的。<br><img src="https://developer.android.google.cn/static/images/jetpack/compose/udf-hello-screen.png" width ="300"/></p>]]></content>
     
     
+    <categories>
+      
+      <category>Android</category>
+      
+    </categories>
+    
     
     <tags>
       
@@ -29,6 +35,12 @@
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在学习<code>compose</code> 中，最好的资料是官方文档，但是在学习官方文档时，容易因为语言的差异性，导致概念容易出现混淆，所谓基础不牢，地动山摇。记录一篇博文，给自己和需要的朋友参考。</p><h3 id="什么是-Compose"><a href="#什么是-Compose" class="headerlink" title="什么是 Compose ?"></a>什么是 Compose ?</h3><p><code>compose</code> 全称 <code>Jetpack Compose</code> 是被<code>Google</code>推荐用于构建原生 <code>Android</code> 界面的新工具包。它可简化并加快 <code>Android</code> 上的界面开发，使用更少的代码、强大的工具和直观的 <code>Kotlin API</code>，快速打造生动而精彩的应用。</p><p>一句话，Android 推出新的原生声明式 UI 框架叫 <code>compose</code></p><h3 id="什么是-composable"><a href="#什么是-composable" class="headerlink" title="什么是 composable ?"></a>什么是 composable ?</h3><p><code>composable</code> 可组合函数 有时候官方也称之为 可组合项 是 <code>composable functions</code> 的简称，这些函数会有一个 <code>@composable</code> 的注解，用官方的话来说是 —— Jetpack Compose 是围绕可组合函数构建的。这些函数可让您以程序化方式定义应用的界面，只需描述应用界面的外观并提供数据依赖项，而不必关注界面的构建过程（初始化元素、将其附加到父项等）。如需创建可组合函数，只需将 <code>@Composable</code> 注解添加到函数名称中即可。</p><h3 id="什么是-Composition"><a href="#什么是-Composition" class="headerlink" title="什么是 Composition ?"></a>什么是 Composition ?</h3><p>没错，这玩意儿才是真正的 <strong>组合</strong> (n,名词) </p><p>或者说，官方一直说的组合就是这个玩意儿，那组合到底是什么呢？</p><p><em>A Composition describes the UI of your app and is produced by running composables. The Composition is a tree-structure that consists of the composables that describe your UI.</em></p><p>Composition 将描述应用的界面，Composition 是一个树形结构，由可组合项 ——<code>composables</code> 组成 ，确切的说，组合是通过运行可组合项来生成的。</p><h3 id="什么是-Initial-composition-？"><a href="#什么是-Initial-composition-？" class="headerlink" title="什么是 Initial composition ？"></a>什么是 Initial composition ？</h3><p><em>Creation of a Composition by running composables the first time.</em></p><p>前面我们学习到，组合是通过运行可组合项来生成的。这里给了补充 ———— 通过首次运行可组合项来创建组合。</p><p>官方将这个行为称为 <code>Initial composition</code> 初始组合。</p><h3 id="什么是-Recomposition-x2F-Recompose"><a href="#什么是-Recomposition-x2F-Recompose" class="headerlink" title="什么是 Recomposition &#x2F; Recompose ?"></a>什么是 Recomposition &#x2F; Recompose ?</h3><p>即重组，重组其实就是再次运行（或者说重新运行）可组合项来更新组合。我们知道，在可组合项的状态发生改变的时候，可组合项会进行重组。</p><p>组合只能通过初始组合生成且只能通过重组进行更新。重组是修改组合的唯一方式。</p><h3 id="Next"><a href="#Next" class="headerlink" title="Next?"></a>Next?</h3><p>在搞清楚这些基础且十分重要的概念之后，我们再学习基于此更高一层的概念时，方能做到通透贯彻，比如：</p><ul><li><p>什么是 可组合项 的声明周期？可组合项被添入组合，执行 0 次或多次重组，然后退出组合。</p></li><li><p>在讨论有状态无状态时我们说的是什么？我们说的是可组合项是否有状态</p></li><li><p><code>remember</code> 将状态存放到哪里？存放在可组合项中？ <strong>no no no</strong> 是 存放在 组合 <code>composition</code> 中。</p><p>  …</p></li></ul><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><code>Compose</code> 是 Android 的全新技术，可也推出2年了，碍于客户端的没落，学习资料相对匮乏，一些基础性的概念自己匆匆撇过导致学习过程中走了不少歪路，回头看文档时，才知道自己的理解出了岔子。看来在技术的路上，还是要做到切勿好高骛远，一定要脚踏实地。</p>]]></content>
     
+    
+    <categories>
+      
+      <category>Android</category>
+      
+    </categories>
     
     
     <tags>
